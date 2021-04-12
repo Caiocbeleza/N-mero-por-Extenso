@@ -1,3 +1,4 @@
+import json
 UNIDADES = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove')
 DEZENA_ESPECIAL = ('', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove')
 DEZENAS = ('', 'dez', 'vinte', 'trinta', 'quarenta', 'cinquenta', 'sessenta', 'setenta', 'oitenta', 'noventa')
@@ -145,7 +146,9 @@ if __name__ == '__main__':
         try:
             numero = input('Digite um número real: ')
             extenso = real(numero)
-            print(numero, extenso)
+            data = {'extenso': str(extenso)}
+            with open('extenso.json', 'w') as outfile:
+                json.dump(data, outfile, ensure_ascii=False)
             break
         except ValueError as erro:
             print('ERRO!! ', erro)
