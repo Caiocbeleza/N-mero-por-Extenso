@@ -1,9 +1,12 @@
 import os
 from flask import Flask, jsonify
 from extenso import real
+
 app = Flask(__name__)
 
-#we define the route /
+app.config['JSON_AS_ASCII'] =False
+
+
 @app.route('/<int:num>', methods=["GET"])
 def get_extenso(num):
     extenso = real(num)
