@@ -2,15 +2,15 @@
 
 ### Rodando a aplicação pela primeira vez:
 
-git clone https://github.com/Caiocbeleza/N-mero-por-Extenso
+<mark> $ git clone https://github.com/Caiocbeleza/N-mero-por-Extenso </mark>
 
-cd N-mero-por-Extenso
+<mark> $ cd N-mero-por-Extenso </mark>
 
-cd docker
+<mark> $ cd docker </mark>
 
-sudo docker-compose build
+<mark> $ sudo docker-compose build </mark>
 
-sudo docker-compose up
+<mark> $ sudo docker-compose up </mark>
 
 ### Ao iniciar:
-http://0.0.0.0:5000/numero-inteiro-para-transformar-em-extenso
+<mark> http://0.0.0.0:5000/numero-inteiro-para-transformar-em-extenso </mark>
