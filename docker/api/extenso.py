@@ -3,12 +3,7 @@ UNIDADES = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'o
 DEZENA_ESPECIAL = ('', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove')
 DEZENAS = ('', 'dez', 'vinte', 'trinta', 'quarenta', 'cinquenta', 'sessenta', 'setenta', 'oitenta', 'noventa')
 CENTENAS = ('cem', 'cento', 'duzentos', 'trezentos', 'quatrocentos', 'quinhentos', 'seiscentos', 'setecentos','oitocentos', 'novecentos')
-MILHAR = (('milhão', 'milhões'), ('bilhão', 'bilhões'), ('trilhão', 'trilhões'), ('quatrilhão', 'quatrilhões'), ('quintilhão', 'quintilhões'),
-    ('sextilhão', 'sextilhões'), ('septilhão', 'septilhões'), ('octilhão', 'octilhões'), ('nonilhão', 'nonilhões'), ('decilhão', 'decilhões'),
-    ('unodecilhão', 'unodecilhões'), ('duodecilhão', 'duodecilhões'), ('tredecilhão', 'tredecilhões'), ('quatuordecilhão', 'quatuordecilhões'),
-    ('quindecilhão', 'quindecilhões'), ('sexdecilhão', 'sexdecilhões'), ('sepdecilhão', 'sepdecilhões'), ('octodecilhão', 'octodecilhões'),
-    ('novemdecilhão', 'novemdecilhões')
-)
+MILHAR = (('milhão', 'milhões'))
 
 
 def unidade_dezena_centena(terno):
@@ -139,16 +134,3 @@ def real(numero:float or str):
                 
     return extenso
 
-
-if __name__ == '__main__':
-    
-    while True:
-        try:
-            numero = input('Digite um número real: ')
-            extenso = real(numero)
-            data = {'extenso': str(extenso)}
-            with open('extenso.json', 'w') as outfile:
-                json.dump(data, outfile, ensure_ascii=False)
-            break
-        except ValueError as erro:
-            print('ERRO!! ', erro)
