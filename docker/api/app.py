@@ -4,14 +4,14 @@ from extenso import real
 
 app = Flask(__name__)
 
-app.config['JSON_AS_ASCII'] =False
+app.config['JSON_AS_ASCII'] = False
 
 
 @app.route('/<int:num>', methods=["GET"])
 def get_extenso(num):
     extenso = real(num)
     # return a json
-    return jsonify({'extenso': extenso})
+    return jsonify({"extenso": extenso})
 
 if __name__ == '__main__':
     #define the localhost ip and the port that is going to be used
